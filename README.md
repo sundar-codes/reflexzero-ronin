@@ -5,7 +5,7 @@ Survive the staredown. A hardcore, samurai-themed reaction speed game built with
 </h1>
 
 <p align="center">
-  <a href="[https://sundar-codes.github.io/reflexzero-ronin/]"><strong>🕹️ Play the Live Demo Here</strong></a>
+  <a href="https://sundar-codes.github.io/reflexzero-ronin/"><strong>🕹️ Play the Live Demo Here</strong></a>
 </p>
 
 ---
