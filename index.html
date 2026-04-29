@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReflexZero: Ronin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="flash-overlay"></div>
+    <div id="slash-line"></div>
+    
+    <div id="toast-container"></div>
+
+    <aside class="side-panel left-panel">
+        <div class="panel-header">PATH OF HONOR</div>
+        <ul id="achievement-list" class="achievement-list">
+            </ul>
+    </aside>
+
+    <div class="side-panel right-panel atmospheric-kanji" id="bg-kanji">
+        </div>
+    
+    <button id="btn-about" class="fixed-ui fixed-top-right">ABOUT</button>
+    
+    <footer class="fixed-ui fixed-bottom-right lobby-footer">
+        <a href="https://www.instagram.com/sundar__07_?igsh=MXZhemJibWc5bzI0eQ%3D%3D" target="_blank">Instagram</a>
+        <a href="https://github.com/sundar-codes" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/sundar-codes/" target="_blank">LinkedIn</a>
+    </footer>
+
+    <div id="about-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>THE LORE</h2>
+            <p>You are a wandering Ronin in a land where hesitation is death. Your blade is fast, but are your eyes faster? Survive the staredown, ignore the enemy's shadow feints, and strike true.</p>
+            <button id="close-about" class="ui-btn">SHEATHE SWORD</button>
+        </div>
+    </div>
+    
+    <div class="app-container" id="main-container">
+        
+        <div id="lobby-view">
+            <div class="lobby-header">
+                <h1>REFLEX<span class="highlight">ZERO</span></h1>
+                <p>Path of the Samurai</p>
+                <div class="best-score-display">
+                    <span>Highest Honor: </span><span id="lobby-best">0</span>
+                </div>
+            </div>
+
+            <div class="mode-selection">
+                <button class="mode-btn easy" data-mode="easy">
+                    <h3>WANDERER</h3>
+                    <p>Easy • 400ms • 10% Feint</p>
+                </button>
+                <button class="mode-btn medium" data-mode="medium">
+                    <h3>WARRIOR</h3>
+                    <p>Medium • 280ms • 30% Feint</p>
+                </button>
+                <button class="mode-btn hard" data-mode="hard">
+                    <h3>DEMON</h3>
+                    <p>Hard • 200ms • 50% Feint</p>
+                </button>
+            </div>
+            
+            <div class="instructions">
+                <strong>RULES OF ENGAGEMENT:</strong> Do not strike while the enemy stares or twitches (?). Strike <strong>ONLY</strong> when the red <span class="highlight-red">(!)</span> appears. You must be faster than the enemy's draw time.
+            </div>
+        </div>
+
+        <div id="game-view" class="hidden">
+            <header>
+                <div class="top-controls">
+                    <button id="btn-leave" class="ui-btn">← Flee</button>
+                    <div class="current-path" id="current-path">PATH: WARRIOR</div>
+                    <div class="stat-box mini">
+                        <span class="stat-label">Streak</span>
+                        <span id="streak-count" class="stat-value streak-value">0</span>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <div id="game-pad" class="pad state-idle">
+                    <div class="samurai-face">
+                        <div class="eye left-eye"></div>
+                        <div class="eye right-eye"></div>
+                    </div>
+
+                    <div class="pad-content">
+                        <h2 id="main-text">GET READY</h2>
+                        <p id="sub-text">Starting...</p>
+                        <button id="btn-restart" class="action-btn hidden">Start a New Life</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
